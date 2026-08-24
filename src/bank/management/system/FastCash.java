@@ -4,7 +4,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.sql.*;
-import java.util.*;
 import java.util.Date;
 
 public class FastCash extends JFrame implements ActionListener {

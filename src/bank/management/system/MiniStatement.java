@@ -3,9 +3,7 @@ package bank.management.system;
 import java.awt.Color;
 import java.awt.*;
 import javax.swing.*;
-import java.util.*;
 import java.sql.*;
-import java.awt.event.*;
 
 public class MiniStatement extends JFrame {
 
@@ -50,13 +48,6 @@ public class MiniStatement extends JFrame {
                 mini.setText(mini.getText()+"<html>"+rs.getString("date")+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+rs.getString("type")+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+rs.getString("amount")+"<br><br>");
             }
         }catch(Exception e){
-            System.out.println(e.getMessage());
-        }
-        try{
-            Conn conn = new Conn();
-            
-        }
-        catch(Exception e){
             System.out.println(e.getMessage());
         }
         
