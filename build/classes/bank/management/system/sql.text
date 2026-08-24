@@ -1,0 +1,58 @@
+all sql queries used in the project
+
+create database bankmanagementsystem;
+use bankmanagementsystem;
+create table signup(
+	formno varchar(10),
+    name varchar(20),
+    fname varchar(20),
+    dob varchar(20),
+    email varchar(30),
+    gender varchar(10),
+    marritalstatus varchar(10),
+    address varchar(50),
+    city varchar(20),
+    state varchar(20),
+    pincode varchar(10)
+);
+ALTER TABLE signup
+RENAME COLUMN marritalstatus TO marritalStatus;
+select * from signup;
+create table signuptwo(
+	formno varchar(10),
+    religion varchar(10),
+    category varchar(10),
+    income varchar(20),
+    education varchar(20),
+    occupation varchar(20),
+    pan varchar(20),
+    aadhar varchar(20),
+    senior varchar(10),
+    exisiting varchar(10)
+);
+select * from signup;
+select * from signuptwo;
+truncate table signuptwo;
+select * from signup join signuptwo on signup.formno=signuptwo.formno;
+
+drop table training_data;
+select * from training_data;
+
+create table signupthree(
+	formno varchar(10),
+    accountType varchar(30),
+    cardNumber varchar(20),
+    pinNumber varchar(10),
+    facility varchar(50)
+);
+select * from signupthree;
+
+create table login( formno varchar(10), cardNumber varchar(20),pinNumber varchar (10));
+select * from login;
+truncate table signupthree; 
+
+create table bank(pin varchar(10),date varchar(50),type varchar(20),amount varchar(20));
+drop table bank;
+select * from bank;
+select * from signupthree;
+select * from login;
